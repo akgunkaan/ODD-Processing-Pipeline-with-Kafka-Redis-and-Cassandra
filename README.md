@@ -35,10 +35,6 @@ The selection of technologies aligns with the CAP theorem (Consistency, Availabi
 
 ### 1. Clone the Repository
 
-```bash
-git clone <your-repository-url>
-cd <repository-directory>
-```
 
 ### 2. Directory Structure
 
@@ -103,5 +99,6 @@ The Python application will now be able to write data to Cassandra.
 1.  Connect to the Cassandra container's shell: `docker-compose exec cassandra cqlsh`
 
 2.  Run a query to see all stored records: `SELECT * FROM cap_odd_system.odds;`
+
 
 
