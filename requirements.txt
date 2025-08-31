@@ -1,0 +1,5 @@
+numpy
+pyyaml
+kafka-python
+redis
+cassandra-driver
