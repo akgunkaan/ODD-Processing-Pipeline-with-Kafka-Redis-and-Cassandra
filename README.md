@@ -6,17 +6,6 @@ This project demonstrates a data processing pipeline designed to ingest, priorit
 
 The pipeline follows a clear, decoupled data flow, making it scalable and resilient.
 
-```
-[YAML Files] -> [1. Python Producer] -> [2. Kafka Topic] -> [3. Python Consumer] --+
-                                                                                   |
-                                                          +------------------------+
-                                                          |                        |
-                                                 (If Category is 'Corner Case')    (All ODDs)
-                                                          |                        |
-                                                          V                        V
-                                                 [4. Redis List]          [5. Cassandra Table]
-                                            (For High-Priority/Fast Access) (For Long-Term Storage)
-```
 
 ### Technology Choices & CAP Theorem
 
@@ -110,4 +99,5 @@ The Python application will now be able to write data to Cassandra.
 ### Check Cassandra for All ODDs
 
 1.  Connect to the Cassandra container's shell: `docker-compose exec cassandra cqlsh`
+
 2.  Run a query to see all stored records: `SELECT * FROM cap_odd_system.odds;`
