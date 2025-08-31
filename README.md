@@ -6,6 +6,9 @@ This project demonstrates a data processing pipeline designed to ingest, priorit
 
 The pipeline follows a clear, decoupled data flow, making it scalable and resilient.
 
+<img width="790" height="206" alt="image" src="https://github.com/user-attachments/assets/b72f3db7-690b-454c-ab1e-9d98e379ed51" />
+
+
 ### Technology Choices & CAP Theorem
 
 The selection of technologies aligns with the CAP theorem (Consistency, Availability, Partition Tolerance) to handle different data needs:
@@ -100,4 +103,5 @@ The Python application will now be able to write data to Cassandra.
 1.  Connect to the Cassandra container's shell: `docker-compose exec cassandra cqlsh`
 
 2.  Run a query to see all stored records: `SELECT * FROM cap_odd_system.odds;`
+
 
