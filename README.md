@@ -6,28 +6,6 @@ This project demonstrates a data processing pipeline designed to ingest, priorit
 
 The pipeline follows a clear, decoupled data flow, making it scalable and resilient.
 
-```plantuml
-@startuml
-!theme vibrant
-skinparam componentStyle uml2
-
-cloud "YAML Files" as Files
-node "Python Producer" as Producer
-queue "Kafka Topic" as Kafka
-node "Python Consumer" as Consumer
-database "Redis\n(For High-Priority/Fast Access)" as Redis
-database "Cassandra\n(For Long-Term Storage)" as Cassandra
-
-Files -> Producer
-Producer -> Kafka
-Kafka -> Consumer
-
-Consumer --> Redis : If Category is 'Corner Case'
-Consumer --> Cassandra : All ODDs
-
-@enduml
-
-
 ### Technology Choices & CAP Theorem
 
 The selection of technologies aligns with the CAP theorem (Consistency, Availability, Partition Tolerance) to handle different data needs:
