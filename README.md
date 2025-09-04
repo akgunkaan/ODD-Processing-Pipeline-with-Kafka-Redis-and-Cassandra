@@ -1,4 +1,4 @@
-# ODD Processing Pipeline with Kafka, Redis, and Cassandra
+# ODD Processing Pipeline with Kafka, Redis, and Cassandra PoC
 
 This project demonstrates a data processing pipeline designed to ingest, prioritize, and store Operational Design Domain (ODD) data from YAML files. It leverages a modern, distributed architecture based on the principles of the CAP theorem, using Kafka, Redis, and Cassandra.
 
@@ -99,6 +99,7 @@ The Python application will now be able to write data to Cassandra.
 1.  Connect to the Cassandra container's shell: `docker-compose exec cassandra cqlsh`
 
 2.  Run a query to see all stored records: `SELECT * FROM cap_odd_system.odds;`
+
 
 
 
